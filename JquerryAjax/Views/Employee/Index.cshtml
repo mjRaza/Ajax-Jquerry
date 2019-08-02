@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <ul class=" nav nav-tabs" id="divForUl" >
+        <li><a data-toggle="tab" href="#Fdiv">View All</a></li>
+        <li class="active"><a data-toggle="tab" href="#Sdiv">Add New</a></li>
+    </ul>
+
+
+
+<div class="tab-content">
+    <div id="Fdiv" class="tab-pane fade in ">@Html.Action("ViewAll")</div>
+    <div id="Sdiv" class="tab-pane fade in active">@Html.Action("AddorEdit")</div>
+</div>
+
+
+
+
+
+
+
+
+@*Client side validation k lia ha ya sb*@
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    }
